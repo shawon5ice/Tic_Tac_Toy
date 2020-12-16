@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="0dp"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -43,7 +43,7 @@
             app:srcCompat="@drawable/yellow" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/player1"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
@@ -56,7 +56,7 @@
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/player2"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
@@ -88,7 +88,7 @@
             android:contentDescription="TODO"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="1" />
+            android:tag="0" />
 
         <ImageView
             android:id="@+id/counter2"
@@ -96,7 +96,7 @@
             android:layout_height="120dp"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="2" />
+            android:tag="1" />
 
         <ImageView
             android:id="@+id/counter3"
@@ -104,7 +104,7 @@
             android:layout_height="120dp"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="3" />
+            android:tag="2" />
 
         <ImageView
             android:id="@+id/counter4"
@@ -112,7 +112,7 @@
             android:layout_height="120dp"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="4" />
+            android:tag="3" />
 
         <ImageView
             android:id="@+id/counter5"
@@ -120,7 +120,7 @@
             android:layout_height="120dp"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="5" />
+            android:tag="4" />
 
         <ImageView
             android:id="@+id/counter6"
@@ -128,7 +128,7 @@
             android:layout_height="120dp"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="6" />
+            android:tag="5" />
 
         <ImageView
             android:id="@+id/counter7"
@@ -136,7 +136,7 @@
             android:layout_height="120dp"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="7" />
+            android:tag="6" />
 
         <ImageView
             android:id="@+id/counter8"
@@ -144,7 +144,7 @@
             android:layout_height="120dp"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="8" />
+            android:tag="7" />
 
         <ImageView
             android:id="@+id/counter9"
@@ -152,7 +152,43 @@
             android:layout_height="120dp"
             android:onClick="dropIn"
             android:padding="10dp"
-            android:tag="9" />
+            android:tag="8" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid_layout"
+        app:rowCount="1">
+
+        <Button
+            android:id="@+id/resetGame"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="#343434"
+            android:onClick="clearGame"
+            android:text="Reset Game"
+            android:textAllCaps="false"
+            app:backgroundTint="#F44336" />
+
+        <Button
+            android:id="@+id/ResetBoard"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rect"
+            android:onClick="playAgain"
+            android:text="Reset Board"
+            android:textAllCaps="false"
+            app:backgroundTint="#4CAF50" />
     </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
